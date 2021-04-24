@@ -15,4 +15,18 @@ public class ParkingTest {
 
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void testToUnparkCar() {
+        String expected = "Unparked";
+        String actual;
+        ParkingLot parkingLot = new ParkingLot(1);
+        Car car = new Car("Unparked");
+        parkingLot.park(car);
+
+        parkingLot.unpark(car);
+        actual = car.getStatus();
+
+        assertEquals(expected, actual);
+    }
 }

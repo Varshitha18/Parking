@@ -15,4 +15,12 @@ public class ParkingLot {
             capacity -= 1;
         }
     }
+
+    public void unpark(Car car) {
+        if(vehicles.contains(car)) {
+            vehicles.remove(car);
+            car.setStatus("Unparked");
+            capacity += 1;
+        }
+    }
 }
