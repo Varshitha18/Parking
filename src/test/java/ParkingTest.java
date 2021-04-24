@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class ParkingTest {
     @Test
@@ -28,5 +29,18 @@ public class ParkingTest {
         actual = car.getStatus();
 
         assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testToCheckIfParkingLotIsFull() {
+        String expected = "Parking lot is full";
+        String actual;
+        ParkingLot parkingLot = new ParkingLot(0);
+        Car car = new Car("Unparked");
+
+        actual = parkingLot.park(car);
+
+        assertEquals(expected, actual);
+
     }
 }

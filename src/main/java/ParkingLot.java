@@ -8,12 +8,17 @@ public class ParkingLot {
         this.capacity = capacity;
     }
 
-    public void park(Car car) {
+    public String park(Car car) {
         if(capacity >= 1) {
             car.setStatus("Parked");
             vehicles.add(car);
             capacity -= 1;
+            return "Parked";
         }
+        else {
+            return "Parking lot is full";
+        }
+
     }
 
     public void unpark(Car car) {
