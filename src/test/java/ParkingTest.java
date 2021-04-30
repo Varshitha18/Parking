@@ -10,7 +10,7 @@ public class ParkingTest {
         String actual;
         ParkingLot parkingLot = new ParkingLot(1);
         Car car = new Car("Unparked");
-
+////I LIKE THIS
         parkingLot.park(car);
         actual = car.getStatus();
 
